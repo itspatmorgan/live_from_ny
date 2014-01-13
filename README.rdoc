@@ -1,8 +1,21 @@
 App Title: Live From New York
 
 Abstract:
-"Navigating the NY Times archives can be a pain, so I'm working on creating a simple search site that's half way between the traditional archive search and Google's 'I'm feelin' lucky'"
+Navigating the NY Times archives can be a pain, so I'm working on creating a simple search site that's half way between traditional archive search and Google's 'I'm feelin' lucky'. Think of it as a more thorough 'On this day' search.
+
+The site:
+- Shows NY Times articles from a user-entered date.
+- It shows current articles.
+- It shows NY events now.
+
+Filter search by:
+- Newspaper section ()
+- Keyword
+
+Users can:
+- Like/save articles
+- Mark that they plan to attend an event
 
 Heroku:
-
+http://live-from-ny.herokuapp.com/
 
