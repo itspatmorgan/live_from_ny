@@ -4,3 +4,11 @@
   <input type="text" name="date" placeholder="Date: YYYY/MM/DD">
   <button id="submit">submit</button>
 </form>
+
+<h3><a href="<%=new_user_registration_path%>">Sign Up</a></h3>
+<h3><a href="<%=new_user_session_path%>">Sign In</a></h3>
+
+<form action="<%=destroy_user_session_path%>" method="post">
+  <input type="hidden" name='_method' value='delete'>
+  <button id="submit">Log out</button>
+</form>
