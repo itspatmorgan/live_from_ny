@@ -156,6 +156,7 @@ DEPENDENCIES
   devise
   httparty
   jquery-rails
+  json (~> 1.8.1)
   nytimes-articles (~> 0.4.1)
   nytimes-events (~> 0.0.1)
   pg

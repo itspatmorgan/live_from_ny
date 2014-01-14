@@ -1,1 +1,19 @@
 <h1><%=@date%></h1>
+
+<table border="1px black">
+  <% @articles_hash.each do |article| %>
+    <tr>  
+      <td>
+        <a href="<%=article["web_url"]%>"><%= article["headline"]["main"]%></a>
+      </td>
+      <td>
+        <a href="">LIKE</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <%= article["lead_paragraph"] %>
+      </td>
+    </tr>
+  <% end %>
+</table>
