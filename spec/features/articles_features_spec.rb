@@ -12,7 +12,7 @@ describe ArticlesController do
         click_button "submit"
         
         search_key = ENV['NYTIMES_SEARCH_KEY']
-        articles = HTTParty.get('http://api.nytimes.com/svc/search/v2/articlesearch.json?begin_date=#{@date}&end_date=#{@date}&api-key=#{search_key}')
+        articles = HTTParty.get("http://api.nytimes.com/svc/search/v2/articlesearch.json?begin_date=#{@date}&end_date=#{@date}&api-key=#{search_key}")
         @articles_hash = articles["response"]["docs"]
 
         current_path.should == articles_path

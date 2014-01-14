@@ -1,7 +1,7 @@
-<h1><%=@date%></h1>
+<h1>Articles / <%=@date%></h1>
 
 <table border="1px black">
-  <% @articles_hash.each do |article| %>
+  <% @articles_hash.each_with_index do |article, index| %>
     <tr>  
       <td>
         <a href="<%=article["web_url"]%>"><%= article["headline"]["main"]%></a>
@@ -12,8 +12,12 @@
         <%= article["lead_paragraph"] %>
       </td>
       <td>
-        <a href="">LIKE</a>
+        <form action="/" method="post">
+          <button id="like_<%= index %>">like</button>
+        </form>
       </td>
     </tr>
   <% end %>
 </table>
+
+<h5><a href="<%=root_path%>">back to home</a></h5>
