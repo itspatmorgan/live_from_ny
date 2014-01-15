@@ -12,7 +12,11 @@
         <%= article["lead_paragraph"] %>
       </td>
       <td>
-        <form action="/" method="post">
+        <form action="/articles" method="post">
+          <input type="hidden" name="headline" value="<%=article["headline"]["main"]%>">
+          <input type="hidden" name="url" value="<%=article["web_url"]%>">
+          <input type="hidden" name="lead_paragraph" value="<%=article["lead_paragraph"]%>">
+          <input type="hidden" name="date" value="<%= @date %>">
           <button id="like_<%= index %>">like</button>
         </form>
       </td>

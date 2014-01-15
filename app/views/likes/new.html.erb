@@ -1,0 +1,13 @@
+<form action="<%= likes_path %>" method="post">
+  <select name="user_id">
+    <% @users.each do |user| %>
+      <option value="<%=user.id%>"><%=user.email%></option>
+    <% end %>
+  </select>
+  <select name="article_id">
+    <% @articles.each do |article| %>
+      <option value="<%=article.id%>"><%=article.headline%></option>
+    <% end %>
+  </select>
+  <button id="submit">Save article to cue</button>
+</form>

@@ -10,6 +10,7 @@ describe LikesController do
       })
       @user = User.create(email: "pat@example.com", password: "password", username: "pat")
       login_as @user
+      @user.articles << @article
     end
     describe "Starting with a user on the articles index path" do
       before do

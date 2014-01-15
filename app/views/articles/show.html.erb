@@ -1,0 +1,7 @@
+<ul>
+  <% @article.each do |article| %>
+    <li><%= article.headline %></li>
+    <li><%= article.url %></li>
+    <li><%= article.lead_paragraph %></li>
+  <% end %>
+</ul>
