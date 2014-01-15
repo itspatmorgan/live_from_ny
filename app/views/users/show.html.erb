@@ -1,8 +1,11 @@
-<!-- Show a particular user's 'liked' articles as a list of hyperlinked headlines -->
-<!-- path => user_path(current_user) -->
+<!-- Current user's show page --> 
+<!-- Show current user's 'liked' articles as a list of hyperlinked headlines -->
+<!-- Button to delete user's 'liked' articles -->
 
 <h1><%= @user.email %></h1>
+
 <a href="<%=edit_user_registration_path%>">Edit User info</a>
+
 <h3>Saved Articles</h3>
 <table>
   <% @user.articles.each do |article| %>
@@ -20,5 +23,8 @@
     </tr>
   <% end %>
 </table>
+
+<!-- Link to previous page / Home -->
 <%= link_to "Back", :back %>
+
 <h5><a href="<%=root_path%>">Home</a></h5>

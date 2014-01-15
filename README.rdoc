@@ -1,11 +1,10 @@
 App Title: Live From New York
 
 Abstract:
-Navigating the NY Times archives can be a pain, so I'm working on creating a simple search site that's half way between traditional archive search and Google's 'I'm feelin' lucky'. Think of it as a more thorough 'On this day' search.
+Navigating the NY Times archives can be a pain, so I'm working on creating a simple search site that's half way between traditional archive search and Google's 'I'm feelin' lucky'. Think of it as a more thorough 'on this day' search.
 
 The site:
 - Shows NY Times articles from a user-entered date.
-- Shows NY Times events from a user-entered date.
 
 Users can:
 - Like/save articles

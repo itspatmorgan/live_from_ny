@@ -24,11 +24,6 @@ class ArticlesController < ApplicationController
     redirect_to user_path(current_user)
   end
 
-  # This route for test purposes only. Remove for production. #
-  def show
-    @article = Article.all
-  end
-
   def destroy
     article = Article.find(params[:id])
     article.destroy

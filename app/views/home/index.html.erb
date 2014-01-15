@@ -1,4 +1,4 @@
-<!-- Home search form that allows a logged-in user to query the NYTIMES search api by a given date -->
+<!-- Query NYTIMES_SEARCH API by a given date -->
 <h1>Live From New York it's...</h1>
 
 <form action="<%=articles_path%>" method="get">
@@ -6,12 +6,12 @@
   <button id="submit">submit</button>
 </form>
 
-<!-- Allow the user to log out -->
+<!-- Log out current user-->
 <form action="<%=destroy_user_session_path%>" method="post">
   <input type="hidden" name='_method' value='delete'>
   <button>Log out</button>
 </form>
 
-<!-- Provide link to User's personalize page -->
+<!-- Link to current user's personalize page -->
 <a href="<%=user_path(current_user)%>">USER SHOW PAGE</a>
 
