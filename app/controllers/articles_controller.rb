@@ -4,8 +4,8 @@ class ArticlesController < ApplicationController
   def index
     @date = params[:date]
 
-    search_key = ENV['NYTIMES_SEARCH_KEY']
-    articles = HTTParty.get("http://api.nytimes.com/svc/search/v2/articlesearch.json?begin_date=#{@date}&end_date=#{@date}&api-key=#{search_key}")
+    articles = HTTParty.get("http://api.nytimes.com/svc/search/v2/articlesearch.json?begin_date=#{@date}&end_date=#{@date}&fq=glocations:NEW%20YORK%20CITY&api-key=#{ENV['NYTIMES_SEARCH_KEY']}")
+
     @articles_hash = articles["response"]["docs"]
   end
 
@@ -30,3 +30,6 @@ class ArticlesController < ApplicationController
     redirect_to user_path(current_user)
   end
 end
+
+
+
