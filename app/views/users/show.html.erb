@@ -2,9 +2,23 @@
 <!-- path => user_path(current_user) -->
 
 <h1><%= @user.email %></h1>
+<a href="<%=edit_user_registration_path%>">Edit User info</a>
 <h3>Saved Articles</h3>
-<ul>
+<table>
   <% @user.articles.each do |article| %>
-    <li><a href="<%= article.url %>"><%= article.headline %></li>
+    <tr>
+      <td>
+        <a href="<%= article.url %>"><%= article.headline %></a>
+      </td>
+      <td>
+        <form action="<%=article_path(article)%>" method="post">
+            <input name="_method" type="hidden" value="delete">
+            <%= token_tag form_authenticity_token %>
+            <button class="btn btn-danger">delete</button>
+        </form>
+      </td>
+    </tr>
   <% end %>
-</ul>
+</table>
+<%= link_to "Back", :back %>
+<h5><a href="<%=root_path%>">Home</a></h5>

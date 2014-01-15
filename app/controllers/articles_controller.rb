@@ -9,7 +9,7 @@ class ArticlesController < ApplicationController
     @articles_hash = articles["response"]["docs"]
   end
 
-  # Upon clicking 'like' button on articles index, this route takes effect #
+  # Upon clicking 'like' button on articles index #
   # Should instantiate article in db, assign that article to current logged-in user #
   # and redirect to that user's show page. #
   def create
@@ -18,7 +18,7 @@ class ArticlesController < ApplicationController
       url: params[:url],
       lead_paragraph: params[:lead_paragraph],
     })
-    
+
     current_user.articles << @article
 
     redirect_to user_path(current_user)
@@ -27,5 +27,11 @@ class ArticlesController < ApplicationController
   # This route for test purposes only. Remove for production. #
   def show
     @article = Article.all
+  end
+
+  def destroy
+    article = Article.find(params[:id])
+    article.destroy
+    redirect_to user_path(current_user)
   end
 end

@@ -4,6 +4,8 @@ LiveFromNy::Application.routes.draw do
 
   root :to => "home#index"
 
+  get '/events/search' => 'events#search', as: 'events_search'
+
   resources :users
   resources :articles
   resources :events
