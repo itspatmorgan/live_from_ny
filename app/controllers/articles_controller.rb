@@ -14,16 +14,16 @@ class ArticlesController < ApplicationController
       url: params[:url],
       lead_paragraph: params[:lead_paragraph],
     })
-    
     # @date = params[:date]
-    # user = User.find(params[:id])
-    # article = Article.find(params[:article_id])
-    # @like = Like.create({
-    #   user_id: 
-    #   article_id:
-    # })
-    #redirect_to "/articles?date=#{@date}"
-    redirect_to new_like_path
+    # redirect_to "/articles?date=#{@date}"
+
+    article = @article.id
+    user = User.find(session["warden.user.user.key"][1][0])
+    like = Like.create({
+      user: user,
+      article: article,
+    })
+    redirect_to user_path(user)
   end
 
   def show
