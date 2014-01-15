@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
 
+  # Route goes to articles index, which displays 10 articles that match user's query #
   def index
     @date = params[:date]
 
@@ -8,24 +9,22 @@ class ArticlesController < ApplicationController
     @articles_hash = articles["response"]["docs"]
   end
 
+  # Upon clicking 'like' button on articles index, this route takes effect #
+  # Should instantiate article in db, assign that article to current logged-in user #
+  # and redirect to that user's show page. #
   def create
     @article = Article.create({
       headline: params[:headline],
       url: params[:url],
       lead_paragraph: params[:lead_paragraph],
     })
-    # @date = params[:date]
-    # redirect_to "/articles?date=#{@date}"
+    
+    current_user.articles << @article
 
-    article = @article.id
-    user = User.find(session["warden.user.user.key"][1][0])
-    like = Like.create({
-      user: user,
-      article: article,
-    })
-    redirect_to user_path(user)
+    redirect_to user_path(current_user)
   end
 
+  # This route for test purposes only. Remove for production. #
   def show
     @article = Article.all
   end

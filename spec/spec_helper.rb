@@ -40,5 +40,6 @@ RSpec.configure do |config|
   #     --seed 1234
   config.order = "random"
 
+  # Test helpers for Devise specific terms #
   config.include Devise::TestHelpers, :type => :controller
 end

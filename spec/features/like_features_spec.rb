@@ -1,16 +1,14 @@
 require 'spec_helper'
 
 describe LikesController do
-  describe "Given an article" do
+  describe "Given a logged-in user" do
     before do
-      @article = Article.create({
-        headline: 'I am a headline',
-        lead_paragraph: 'I am a lead paragraph',
-        url: 'example.com',
+      @user = User.create({
+          email: 'pat@example.com', 
+          password: 'password', 
+          username: 'pat',
       })
-      @user = User.create(email: "pat@example.com", password: "password", username: "pat")
       login_as @user
-      @user.articles << @article
     end
     describe "Starting with a user on the articles index path" do
       before do
@@ -20,7 +18,13 @@ describe LikesController do
         click_button "like_#{@index}"
       end
       it "should create a like when button is clicked" do
-        @user.reload.likes.first.article.should == @article
+        @article = Article.create({
+          headline: 'I am a headline',
+          lead_paragraph: 'I am a lead paragraph',
+          url: 'example.com',
+        })
+        @user.articles << @article
+        @user.articles.should include Article.find(@article.id)
       end
       it "should show headline on user show page" do
         visit user_path(@user)

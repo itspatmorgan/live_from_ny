@@ -12,10 +12,8 @@ gem 'devise'
 gem 'rspec-rails'
 gem 'capybara'
 
-gem "nytimes-articles", "~> 0.4.1"
-gem "nytimes-events", "~> 0.0.1"
 gem 'httparty'
-gem "json", "~> 1.8.1"
+gem 'json', '~> 1.8.1'
 
 # Gems used only for assets and not required
 # in production environments by default.

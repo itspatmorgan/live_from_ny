@@ -1,13 +1,22 @@
+<!-- This page for test purposes only. Can assign an article to a user as a like through this form -->
+
 <form action="<%= likes_path %>" method="post">
-  <select name="user_id">
-    <% @users.each do |user| %>
-      <option value="<%=user.id%>"><%=user.email%></option>
-    <% end %>
-  </select>
-  <select name="article_id">
-    <% @articles.each do |article| %>
-      <option value="<%=article.id%>"><%=article.headline%></option>
-    <% end %>
-  </select>
-  <button id="submit">Save article to cue</button>
+
+    <!-- choose a registered user from a dropdown -->
+    <select name="user_id">
+      <% @users.each do |user| %>
+        <option value="<%=user.id%>"><%=user.email%></option>
+      <% end %>
+    </select>
+
+    <!-- choose an article from the db from a dropdown -->
+    <select name="article_id">
+      <% @articles.each do |article| %>
+        <option value="<%=article.id%>"><%=article.headline%></option>
+      <% end %>
+    </select>
+    
+    <!-- assign article to user as a like on click -->
+    <button id="submit">Save article to cue</button>
+
 </form>

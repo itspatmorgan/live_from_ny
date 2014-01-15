@@ -5,12 +5,7 @@ Navigating the NY Times archives can be a pain, so I'm working on creating a sim
 
 The site:
 - Shows NY Times articles from a user-entered date.
-- It shows current articles.
-- It shows NY events now.
-
-Filter search by:
-- Newspaper section ()
-- Keyword
+- Shows NY Times events from a user-entered date.
 
 Users can:
 - Like/save articles

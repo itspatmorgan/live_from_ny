@@ -1,5 +1,7 @@
+<!-- Show a table of article results based on the date query to NYTIMES search API -->
 <h1>Articles / <%=@date%></h1>
 
+<!-- Table includes hyperlinked headline, the lead paragraph of the article and a 'like' button -->
 <table border="1px black">
   <% @articles_hash.each_with_index do |article, index| %>
     <tr>  
@@ -12,11 +14,12 @@
         <%= article["lead_paragraph"] %>
       </td>
       <td>
-        <form action="/articles" method="post">
+        <form action="<%=articles_path%>" method="post">
           <input type="hidden" name="headline" value="<%=article["headline"]["main"]%>">
           <input type="hidden" name="url" value="<%=article["web_url"]%>">
           <input type="hidden" name="lead_paragraph" value="<%=article["lead_paragraph"]%>">
           <input type="hidden" name="date" value="<%= @date %>">
+          <%= token_tag form_authenticity_token %>
           <button id="like_<%= index %>">like</button>
         </form>
       </td>
@@ -24,4 +27,5 @@
   <% end %>
 </table>
 
+<!-- Provide a link back to the home search page. Do another search -->
 <h5><a href="<%=root_path%>">back to home</a></h5>

@@ -1,5 +1,8 @@
 class LikesController < ApplicationController
 
+  # These routes only for test purposes #
+  # They shouldn't be in final app #
+
   def new
     @users = User.all
     @articles = Article.all

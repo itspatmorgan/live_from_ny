@@ -1,4 +1,4 @@
-require 'spec_helper'
+# require 'spec_helper'
 
 # describe ArticlesController do
 #   describe "Retrieve articles from the API" do
