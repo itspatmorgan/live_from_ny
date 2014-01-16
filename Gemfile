@@ -11,6 +11,8 @@ gem 'devise'
 
 gem 'rspec-rails'
 gem 'capybara'
+gem 'simplecov', :require => false, :group => :test
+
 
 gem 'httparty'
 gem 'json', '~> 1.8.1'
