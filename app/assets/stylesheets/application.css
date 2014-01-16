@@ -12,3 +12,38 @@
  *= require_self
  *= require_tree .
  */
+body {
+  padding-top: 5px;
+  background-image: url('/images/nyc_bg.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+#main_search {
+  margin-top: 125px;
+  background-color: rgba(255, 255, 255, .9);
+}
+
+#user_profile {
+  background-color: rgba(255, 255, 255, .9);
+  width:85%;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+#articles_table {
+  background-color: rgba(255, 255, 255, .9);
+  padding: 10px;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+#table_header {
+  padding-bottom: 15px;
+  padding-top: .5px;
+}
+#log_out {
+  margin: 6px 15px 0 0;
+  float: right;
+}

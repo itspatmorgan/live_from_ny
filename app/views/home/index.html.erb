@@ -1,17 +1,27 @@
 <!-- Query NYTIMES_SEARCH API by a given date -->
-<h1>Live From New York it's...</h1>
 
-<form action="<%=articles_path%>" method="get">
-  <input type="text" name="date" placeholder="MM/DD/YYYY">
-  <button id="submit">submit</button>
-</form>
+<nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="navbar-header">
+      <a class="navbar-brand" href="/">LiveFromNY</a>
+      <a class="navbar-brand" href="/">Home</a>
+      <a class="navbar-brand" href="<%=user_path(current_user)%>">Profile</a>
+  </div>
+</nav>
 
-<!-- Log out current user-->
-<form action="<%=destroy_user_session_path%>" method="post">
-  <input type="hidden" name='_method' value='delete'>
-  <button>Log out</button>
-</form>
+<div class="jumbotron" id="main_search">
+  <h1>Live From New York it's...</h1>
 
-<!-- Link to current user's personalize page -->
-<a href="<%=user_path(current_user)%>">USER SHOW PAGE</a>
+  <form class="form-inline" role="form" action="<%=articles_path%>" method="get">
+    <div class="form-group has-info">
+      <input class="form-control input-lg" type="text" name="date" placeholder="MM/DD/YYYY">
+    </div>
+    <button id="submit" class="btn btn-default btn-lg">Search</button>
+  </form>
+</div>
 
+<nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
+  <form action="<%=destroy_user_session_path%>" method="post">
+    <input type="hidden" name='_method' value='delete'>
+    <button class="btn btn-default" id="log_out">Log out</button>
+  </form>
+</nav>
