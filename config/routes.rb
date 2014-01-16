@@ -4,11 +4,7 @@ LiveFromNy::Application.routes.draw do
 
   root :to => "home#index"
 
-  get '/events/search' => 'events#search', as: 'events_search'
-
-  resources :users
-  resources :articles
-  resources :events
+  resources :users, only: [:show]
+  resources :articles, except: [:new, :edit, :update, :show]
   resources :likes
-  resources :attendances
 end

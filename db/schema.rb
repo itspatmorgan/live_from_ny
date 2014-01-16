@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20140115010312) do
+ActiveRecord::Schema.define(:version => 20140116000109) do
 
   create_table "articles", :force => true do |t|
     t.string   "headline"
@@ -19,24 +19,6 @@ ActiveRecord::Schema.define(:version => 20140115010312) do
     t.text     "lead_paragraph"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
-  end
-
-  create_table "attendances", :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "event_id"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
-
-  create_table "events", :force => true do |t|
-    t.string   "name"
-    t.string   "url"
-    t.string   "description"
-    t.string   "borough"
-    t.string   "neighborhood"
-    t.boolean  "free"
-    t.datetime "created_at",   :null => false
-    t.datetime "updated_at",   :null => false
   end
 
   create_table "likes", :force => true do |t|
