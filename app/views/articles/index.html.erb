@@ -1,8 +1,8 @@
 <!-- Show a table of article results based on the date query to NYTIMES search API -->
-<h1>Articles / <%=@date%></h1>
+<h1>Articles / <%=@date_formatted%></h1>
 
 <!-- Table includes hyperlinked headline, the lead paragraph of the article and a 'like' button -->
-<table border="1px black">
+<table>
   <% @articles_hash.each_with_index do |article, index| %>
     <tr>  
       <td>
@@ -29,4 +29,4 @@
 
 <!-- Provide a link back to the home search page. Do another search -->
 <h5><a href="<%=root_path%>">Home</a></h5>
-<%= link_to "Back", :back %>
+<h5><%= link_to "Back", :back %></h5>

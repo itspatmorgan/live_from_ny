@@ -2,7 +2,10 @@ class ArticlesController < ApplicationController
 
   # Route goes to articles index, which displays 10 articles that match user's query #
   def index
-    @date = params[:date]
+    @date_formatted = params[:date]
+    array = @date_formatted.split("/")
+    year = array.pop
+    @date = array.unshift(year).join("")
 
     articles = HTTParty.get("http://api.nytimes.com/svc/search/v2/articlesearch.json?begin_date=#{@date}&end_date=#{@date}&fq=glocations:NEW%20YORK%20CITY&api-key=#{ENV['NYTIMES_SEARCH_KEY']}")
 
