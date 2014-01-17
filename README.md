@@ -13,7 +13,7 @@ Using the New York Times Search API, I've built a simple app to allow users to s
 
 ####Data Models
 
-The app using a straightforward 3 model schema to save articles and associate them with a given user: a 'Users' table is connected to an 'articles' in a many-to-many relationship through a basic join table I chose to call 'likes'.
+The app uses a straightforward 3 model schema to save articles and associate them with a given user: a 'Users' table is connected to an 'articles' table in a many-to-many relationship through a basic join table I chose to call 'likes'.
 
 #####A note on current design:
 
@@ -32,7 +32,3 @@ This app is currently optimized for a 13" Macbook, running Google Chrome. The la
 ![edit_profile](https://www.evernote.com/shard/s82/sh/d664ac3b-56b3-4d08-9d5a-83e7b5b01417/d6729cb02e65acb2fad30fb3cfa0a372/deep/0/LiveFromNY---Edit.png "Edit Profile")
 
 ![password](https://www.evernote.com/shard/s82/sh/79a779a3-eaf2-4ff1-aeea-7b036dd1ac03/e8022f7e4b940f6fcd42c2d1404da83b/deep/0/LiveFromNY---Password.png "Recover Password")
-
-
-
-
