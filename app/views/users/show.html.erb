@@ -24,6 +24,9 @@
         <a href="<%= article.url %>"><%= article.headline %></a>
         </td>
         <td>
+          <%= article.date %>
+        </td>
+        <td>
           <form action="<%=article_path(article)%>" method="post">
               <input name="_method" type="hidden" value="delete">
               <%= token_tag form_authenticity_token %>

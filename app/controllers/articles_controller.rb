@@ -20,6 +20,7 @@ class ArticlesController < ApplicationController
       headline: params[:headline],
       url: params[:url],
       lead_paragraph: params[:lead_paragraph],
+      date: params[:date],
     })
 
     current_user.articles << @article

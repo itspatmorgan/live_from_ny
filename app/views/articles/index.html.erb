@@ -32,7 +32,7 @@
             <input type="hidden" name="headline" value="<%=article["headline"]["main"]%>">
             <input type="hidden" name="url" value="<%=article["web_url"]%>">
             <input type="hidden" name="lead_paragraph" value="<%=article["lead_paragraph"]%>">
-            <input type="hidden" name="date" value="<%= @date %>">
+            <input type="hidden" name="date" value="<%= @date_formatted %>">
             <%= token_tag form_authenticity_token %>
             <button class="btn btn-default" id="like_<%= index %>">Save</button>
           </form>

@@ -29,7 +29,7 @@ body {
 }
 
 #main_search {
-  margin-top: 125px;
+  margin-top: 170px;
   background-color: rgba(255, 255, 255, .9);
 }
 
@@ -42,7 +42,7 @@ body {
   padding: 10px;
   border-radius: 20px;
   margin-bottom: 20px;
-  margin-top: 20px;
+  margin-top: 80px;
 }
 
 #user_profile td, a {
@@ -58,7 +58,7 @@ body {
   padding: 10px;
   border-radius: 20px;
   margin-bottom: 20px;
-  margin-top: 20px;
+  margin-top: 80px;
 }
 
 #table_header {
@@ -71,12 +71,18 @@ body {
 }
 .devise_form {
   background-color: rgba(255, 255, 255, .9);
-  width: 30%;
   padding: 30px;
   border-radius: 20px;
-  margin-top: 20px;
+  margin-top: 135px;
   font-family: futura;
+  position: relative;
+  display: inline-block;
 }
+
+.devise_form #edit {
+  margin-bottom: 30px;
+}
+
 .devise_form h2, .devise_form h3 {
   font-family: futura;
 }
@@ -85,6 +91,10 @@ body {
   font-size: 6em;
   display: inline-block;
   float: right;
-  margin-top: 50px;
-  margin-right: -25px;
+  margin-top: 110px;
+  margin-right: px;
+  position: relative;
+}
+#devise_alert {
+
 }
