@@ -21,9 +21,11 @@ body {
   background-position: center;
   font-family: futura; 
 }
+
 .navbar {
   background-color: rgba(0, 0, 0, .85);
 }
+
 .jumbotron {
   background-color: rgba(255, 255, 255, .9);
 }
@@ -65,36 +67,39 @@ body {
   padding-bottom: 15px;
   padding-top: .5px;
 }
+
 #log_out {
   margin: 6px 15px 0 0;
   float: right;
 }
+
 .devise_form {
   background-color: rgba(255, 255, 255, .9);
   padding: 30px;
   border-radius: 20px;
-  margin-top: 135px;
   font-family: futura;
-  position: relative;
   display: inline-block;
 }
 
-.devise_form #edit {
-  margin-bottom: 30px;
+.devise_form.user_flow {
+  margin-top: 135px;
+  position: relative;
+}
+
+.devise_form.edit {
+  margin-top: 80px;
+  margin-bottom: 20px;
 }
 
 .devise_form h2, .devise_form h3 {
   font-family: futura;
 }
+
 .welcome_name {
   font-family: futura;
-  font-size: 6em;
+  font-size: 5.75em;
   display: inline-block;
   float: right;
   margin-top: 110px;
-  margin-right: px;
   position: relative;
-}
-#devise_alert {
-
 }
