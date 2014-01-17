@@ -3,30 +3,36 @@
 <!-- Button to delete user's 'liked' articles -->
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
   <div class="navbar-header">
-      <a class="navbar-brand" href="/">LiveFromNY</a>
-      <a class="navbar-brand" href="/">Home</a>
-      <a class="navbar-brand" href="<%=user_path(current_user)%>">Profile</a>
+    <ul class="nav navbar-nav">
+      <li><a class="navbar-brand" href="/">LiveFromNY</a></li>
+      <li><a class="navbar-brand" href="/">Home</a></li>
+      <li><a class="navbar-brand" href="<%=user_path(current_user)%>">Profile</a></li>
+      <li><p class="navbar-text" id="signed_in_as">Signed in as <%=current_user.email%></p></li>
+    </ul>
   </div>
 </nav>
 
-<div class="jumbotron" id="user_profile">
-  <h1><%= @user.email %></h1>
-
+<div id="user_profile">
+  <h2><%= @user.email %></h2>
   <a href="<%=edit_user_registration_path%>">Edit Profile</a>
 
-  <h3>Saved Articles</h3>
-  <ul class="list-group">
+  <table class="table">
+  <h2>Saved Articles</h2>
     <% @user.articles.each do |article| %>
-      <li class="list-group-item">
+      <tr>
+        <td>
         <a href="<%= article.url %>"><%= article.headline %></a>
-        <form action="<%=article_path(article)%>" method="post">
-            <input name="_method" type="hidden" value="delete">
-            <%= token_tag form_authenticity_token %>
-            <button class="btn btn-danger">delete</button>
-        </form>
-      </li> 
+        </td>
+        <td>
+          <form action="<%=article_path(article)%>" method="post">
+              <input name="_method" type="hidden" value="delete">
+              <%= token_tag form_authenticity_token %>
+              <button class="btn btn-danger">delete</button>
+          </form>
+        </td>
+      </tr>
     <% end %>
-  </ul>
+  </table>
 </div>
 
 <nav class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">

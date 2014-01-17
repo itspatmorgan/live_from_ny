@@ -12,12 +12,20 @@
  *= require_self
  *= require_tree .
  */
+
 body {
   padding-top: 5px;
   background-image: url('/images/nyc_bg.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;
+  font-family: futura; 
+}
+.navbar {
+  background-color: rgba(0, 0, 0, .85);
+}
+.jumbotron {
+  background-color: rgba(255, 255, 255, .9);
 }
 
 #main_search {
@@ -25,11 +33,24 @@ body {
   background-color: rgba(255, 255, 255, .9);
 }
 
+#main_search h1 {
+  font-family: futura;
+}
+
 #user_profile {
   background-color: rgba(255, 255, 255, .9);
-  width:85%;
-  padding: 20px;
+  padding: 10px;
+  border-radius: 20px;
+  margin-bottom: 20px;
   margin-top: 20px;
+}
+
+#user_profile td, a {
+  font-size: 20px;
+}
+
+#user_profile h2 {
+  font-family: futura;
 }
 
 #articles_table {
@@ -39,6 +60,7 @@ body {
   margin-bottom: 20px;
   margin-top: 20px;
 }
+
 #table_header {
   padding-bottom: 15px;
   padding-top: .5px;
@@ -46,4 +68,23 @@ body {
 #log_out {
   margin: 6px 15px 0 0;
   float: right;
+}
+.devise_form {
+  background-color: rgba(255, 255, 255, .9);
+  width: 30%;
+  padding: 30px;
+  border-radius: 20px;
+  margin-top: 20px;
+  font-family: futura;
+}
+.devise_form h2, .devise_form h3 {
+  font-family: futura;
+}
+.welcome_name {
+  font-family: futura;
+  font-size: 6em;
+  display: inline-block;
+  float: right;
+  margin-top: 50px;
+  margin-right: -25px;
 }
