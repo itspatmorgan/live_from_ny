@@ -1,20 +1,16 @@
 App Title: Live From New York
+Creator: Patrick Morgan
 
-Abstract:
-Navigating the NY Times archives can be a pain, so I'm working on creating a simple search site that's half way between traditional archive search and Google's 'I'm feelin' lucky'. Think of it as a more thorough 'on this day' search.
+Why this idea?
+The New York Times has a page dedicated to seeing important historical events that happened 'on this day in history'. What they don't have, though, is a simple way to see the news articles written about those important days. 
 
-The site:
-- Shows NY Times articles from a user-entered date.
+What it does:
+Using the New York Times Search API, I've built a simple app to allow users to search the NYTIMES archives for a specific date, view top articles from that day and save any interesting ones to a read-later profile.
 
-Users can:
-- Like/save articles
-- Mark that they plan to attend an event
-
-Heroku:
+Live Heroku url: 
 http://live-from-ny.herokuapp.com/
 
-ENV::NYTIMES_SEARCH_KEY
-ENV::NYTIMES_EVENTS_KEY
+
 
 
 
