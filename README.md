@@ -14,7 +14,7 @@ Most people have come across this type of article or webpage at one point or ano
 
 *Using the New York Times Search API, this simple app allows users to:*
 
-  1. Query the NYTIMES Search API for articles on a specific date 
+  1. Query the NYTIMES Search API for articles from any day, **starting in 1852**
   2. View top articles from that day
   3. Save any interesting ones to their own read-later list
 
